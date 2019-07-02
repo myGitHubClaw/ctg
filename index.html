@@ -148,27 +148,61 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-大家好" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Good-evening" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/ctg/2019/07/02/大家好/">firstblog</a>
+      <a class="article-title" href="/ctg/2019/07/02/Good-evening/">Good evening</a>
     </h1>
   
 
         
-        <a href="/ctg/2019/07/02/大家好/" class="archive-article-date">
-  	<time datetime="2019-07-01T23:38:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-02</time>
+        <a href="/ctg/2019/07/02/Good-evening/" class="archive-article-date">
+  	<time datetime="2019-07-02T12:44:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-02</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="大家好我是TZ。"><a href="#大家好我是TZ。" class="headerlink" title="大家好我是TZ。"></a>大家好我是TZ。</h1>
+        <h2 id="如何建一个免费网站"><a href="#如何建一个免费网站" class="headerlink" title="如何建一个免费网站"></a>如何建一个免费网站</h2><p>很早之前就想搭建一个属于自己的博客网站，一方面是给自己做笔记，把平时遇到的问题和解决问题的方式方法记录下来，顺便提升自己的表达能力、总结能力；另一方面，个人博客就像是自己在网络世界中的一个小家，一个完全属于自己的空间，你可以在这里尽情发挥，别人可以通过它来了解你。前段时间偶然间发现了Hexo，看了两天<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">官方文档</a>，参考网上教程，搭建了自己的个人网站：<a href="http://vblog.win/" target="_blank" rel="noopener">http://vblog.win/</a> 欢迎访问！搭建完毕在此记录一下搭建过程。</p>
+<h2 id="1-环境准备"><a href="#1-环境准备" class="headerlink" title="1. 环境准备"></a>1. 环境准备</h2><h3 id="1-1-node-js安装和准备"><a href="#1-1-node-js安装和准备" class="headerlink" title="1.1 node.js安装和准备"></a>1.1 node.js安装和准备</h3><p>在node.js官网 <a href="http://nodejs.cn/download/" target="_blank" rel="noopener">http://nodejs.cn/download/</a> 下载对应安装文件，保持默认设置，一路next，安装结束。<br>打开命令提示符，输入<code>node -v</code>，<code>npm -v</code>输出当前版本号说明node环境搭建完成。</p>
+<p><img src="http://qncdn.kwin.wang/blog/hexoBlog/cmd-node-version.png" alt="img"></p>
+<h3 id="1-2-git安装和准备"><a href="#1-2-git安装和准备" class="headerlink" title="1.2 git安装和准备"></a>1.2 git安装和准备</h3><p>在Git官网 <a href="https://git-scm.com/downloads" target="_blank" rel="noopener">https://git-scm.com/downloads</a> （如未FQ下载过慢可参考<a href="https://github.com/waylau/git-for-win" target="_blank" rel="noopener">地址</a>）下载对应安装文件，保持默认设置一路next也没毛病，这里一点提醒，Git出于安全考虑，只能在<code>Git Bash</code>中进行Git有关的命令操作，如果想要在命令提示符中使用Git命令，在安装过程中调整PATH环境一步需勾选第二项，这样Git安装程序会在系统PATH中设置Git路径，以便于我们在命令提示符中直接使用Git命令（尽管可以这样设置，但还是建议都在Git Bash中输入命令）。</p>
+<p><img src="http://qncdn.kwin.wang/blog/hexoBlog/git-setup-not-default.jpg" alt="img"></p>
+<p>打开命令提示符，输入<code>git --version</code>输出当前版本号说明Git环境搭建完成。</p>
+<h2 id="2-Github账户配置"><a href="#2-Github账户配置" class="headerlink" title="2. Github账户配置"></a>2. Github账户配置</h2><h3 id="2-1-创建仓库"><a href="#2-1-创建仓库" class="headerlink" title="2.1 创建仓库"></a>2.1 创建仓库</h3><p>相信很多coder都有自己的GitHub账号（没有的话去<a href="http://github.com/" target="_blank" rel="noopener">注册一下</a>），利用GitHub建立自己的博客首先需要创建一个<code>username.github.io</code>的仓库，这里的<code>username</code>必须是你的用户名（不是昵称），之后你的个人博客地址就是 <a href="http://username.github.io/" target="_blank" rel="noopener">http://username.github.io</a> 了。</p>
+<h3 id="2-2-代码库设置"><a href="#2-2-代码库设置" class="headerlink" title="2.2 代码库设置"></a>2.2 代码库设置</h3><p>接下来，在新建立好的仓库主页点击菜单栏Settings，找到下方GitHub Pages开启该功能，选择一个主题并提交更改，几分钟后打开 <a href="http://username.github.io/" target="_blank" rel="noopener">http://username.github.io</a> 你就可以访问自己的博客主页了。</p>
+<p><img src="http://qncdn.kwin.wang/blog/hexoBlog/open-github-pages.png" alt="img"></p>
+<h3 id="2-3-配置SSH-key"><a href="#2-3-配置SSH-key" class="headerlink" title="2.3 配置SSH key"></a>2.3 配置SSH key</h3><p>因为我们的博客内容托管于GitHub，因此提交代码需要提供权限给本地，这里使用SSH key相对来说要安全一些，输入命令：</p>
+<p>之后会提示输入一个密码，这个密码在提交代码时使用，这里也可以直接回车，密码置空。最终会在用户目录下生成<code>.ssh</code>文件夹，进入文件夹找到<code>id_rsa.pub</code>文件并打开，复制内容并打开 <a href="https://github.com/settings/keys" target="_blank" rel="noopener">https://github.com/settings/keys</a> 新建SSH key，title自己命名，把刚刚复制的内容粘贴到key处保存，设置完毕。</p>
+<p><img src="http://qncdn.kwin.wang/blog/hexoBlog/add-ssh-key.png" alt="img"></p>
+<p>测试配置是否成功：</p>
+<blockquote>
+<p>Hi wangqingkai! You’ve successfully authenticated, but GitHub does not provide shell access.</p>
+</blockquote>
+<p>看到如上信息则说明SSH key配置成功。</p>
+<h3 id="2-4-配置Git个人信息"><a href="#2-4-配置Git个人信息" class="headerlink" title="2.4 配置Git个人信息"></a>2.4 配置Git个人信息</h3><h2 id="3-Hexo安装与配置"><a href="#3-Hexo安装与配置" class="headerlink" title="3. Hexo安装与配置"></a>3. Hexo安装与配置</h2><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。还是推荐花时间看下官方文档：<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/</a></p>
+<h3 id="3-1-Hexo安装"><a href="#3-1-Hexo安装" class="headerlink" title="3.1 Hexo安装"></a>3.1 Hexo安装</h3><p>新建一个用于存放个人博客源文件的文件夹，进入文件夹开始安装Hexo，由于npm下载一些包在国内会非常慢，这里推荐使用淘宝镜像，右击<code>Git Bash</code>输入以下命令等待安装：</p>
+<p>安装完成之后基本所有命令中的<code>npm</code>都可以用<code>cnpm</code>替代。输入命令：</p>
+<p>Hexo安装完成之后紧接着开始初始化，输入命令：</p>
+<p>生成之后的目录结构应该是这样的，</p>
+<p><img src="http://qncdn.kwin.wang/blog/hexoBlog/hexo-directory.png" alt="img"></p>
+<p>服务启好之后浏览器打开 <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000</a> ，如果可以正常访问，说明我们本地博客已经搭建起来了。Ctrl+C关闭测试服务。</p>
+<h3 id="3-2-Hexo配置"><a href="#3-2-Hexo配置" class="headerlink" title="3.2 Hexo配置"></a>3.2 Hexo配置</h3><h4 id="3-2-1-Hexo主题配置"><a href="#3-2-1-Hexo主题配置" class="headerlink" title="3.2.1 Hexo主题配置"></a>3.2.1 Hexo主题配置</h4><p>因为默认主题达不到我们的要求，首先对Hexo主题进行配置，这里是Hexo<a href="https://hexo.io/themes/" target="_blank" rel="noopener">官方主题</a>。我们用比较受大众喜爱的<code>yilia</code>主题为例，在博客根目录输入命令：</p>
+<p>之后修改博客根目录下<code>_config.yml</code>文件中主题配置为：<code>theme: yilia</code>。</p>
+<p>刷新 <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000</a> 是不是发现高端大气上档次了一些！至于头像、title、菜单等的配置，仔细读一下<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">官方文档</a>，研究一下配置文件（主要有两个<code>_config.yml</code>，一个在博客根目录下，另一个在themes下对应的主题文件夹下），相信这些都难不倒你。</p>
+<h4 id="3-2-2-Deployment配置"><a href="#3-2-2-Deployment配置" class="headerlink" title="3.2.2 Deployment配置"></a>3.2.2 Deployment配置</h4><p>这个很关键，因为博客搭建好了，你不可能让它一直在本地运行，需要把它托管到GitHub或者Coding上，别人才可以访问，因此需要配置Deployment。全局配置文件<code>_config.yml</code>中找到Deployment，配置如下代码：</p>
+<p>我这里同时托管到GitHub和Coding，单独托管到GitHub也可以，把另外一条配置去掉就好。不过这样配置提交的时候一般会报错<code>ERROR Deployer not found: git</code>，不要慌，安装一个插件即可：</p>
+<h4 id="3-2-3-Hexo部署到Git"><a href="#3-2-3-Hexo部署到Git" class="headerlink" title="3.2.3 Hexo部署到Git"></a>3.2.3 Hexo部署到Git</h4><p><img src="http://qncdn.kwin.wang/blog/hexoBlog/hexo-d-success.png" alt="img"></p>
+<p>现在到浏览器里访问一下 <a href="https://mygithubclaw.github.io/ctg/" target="_blank" rel="noopener">https://mygithubclaw.github.io/ctg/</a> 惊不惊喜，意不意外！</p>
+<h2 id="4-如何写博客"><a href="#4-如何写博客" class="headerlink" title="4. 如何写博客"></a>4. 如何写博客</h2><h3 id="4-1-使用命令创建博客"><a href="#4-1-使用命令创建博客" class="headerlink" title="4.1 使用命令创建博客"></a>4.1 使用命令创建博客</h3><p>cd到博客根目录，输入命令：</p>
+<p>这样，Hexo会帮我们在<code>\source\_posts</code>下新建md文件，打开该文件即可使用Markdown语法开始写博客。</p>
+<h3 id="4-2-手动新建md文件"><a href="#4-2-手动新建md文件" class="headerlink" title="4.2 手动新建md文件"></a>4.2 手动新建md文件</h3><p>当然，我们也可以在<code>\source\_posts</code>目录下新建md文件直接进行编辑，需要注意的是md文件的命名一般采用英文，文件内title名为中文即可。推荐作业部落<a href="https://www.zybuluo.com/" target="_blank" rel="noopener">在线编辑器</a>。</p>
+
       
 
       
@@ -180,7 +214,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/ctg/2019/07/02/大家好/">展开全文 >></a>
+          <a class="article-more-a" href="/ctg/2019/07/02/Good-evening/">展开全文 >></a>
         </p>
       
 
